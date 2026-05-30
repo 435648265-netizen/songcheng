@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wenzhou Songcheng Trading Co., Ltd. — Professional manufacturer of kitchen faucets, shower systems, basin faucets, and bathroom hardware. cUPC, ISO 9001, CE certified. Founded in 2007.">
+<title>Songcheng — Premium Bathroom Hardware Manufacturer | OEM/ODM</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue: #1a56db;
+    --blue-dark: #1e40af;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    --white: #ffffff;
+    --orange: #f97316;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--gray-800);
+    line-height: 1.6;
+    background: var(--white);
+  }
+  a { color: var(--blue); text-decoration: none; }
+  img { max-width: 100%; height: auto; display: block; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 80px 0; }
+  .section-gray { background: var(--gray-50); }
+  .section-dark { background: var(--gray-900); color: var(--white); }
+  .section-title {
+    font-size: 32px; font-weight: 700; text-align: center; margin-bottom: 12px;
+    color: var(--gray-900);
+  }
+  .section-dark .section-title { color: var(--white); }
+  .section-subtitle {
+    font-size: 16px; text-align: center; color: var(--gray-500); max-width: 640px;
+    margin: 0 auto 48px;
+  }
+  .section-dark .section-subtitle { color: var(--gray-400); }
+
+  /* Header */
+  .header {
+    background: var(--white); border-bottom: 1px solid var(--gray-200);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header .container {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 10px; padding-bottom: 10px;
+  }
+  .logo { height: 44px; }
+  .nav { display: flex; gap: 32px; }
+  .nav a { color: var(--gray-600); font-size: 14px; font-weight: 500; transition: color .15s; }
+  .nav a:hover { color: var(--blue); }
+  .btn {
+    display: inline-block; padding: 12px 28px; border-radius: 8px; font-size: 14px;
+    font-weight: 600; cursor: pointer; border: none; transition: all .15s; text-align: center;
+  }
+  .btn-primary { background: var(--blue); color: var(--white); }
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-1px); }
+  .btn-white { background: var(--white); color: var(--blue); }
+  .btn-white:hover { background: var(--gray-100); }
+  .btn-outline-white { border: 2px solid var(--white); color: var(--white); background: transparent; }
+  .btn-outline-white:hover { background: var(--white); color: var(--gray-900); }
+
+  /* Hero */
+  .hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1a3a4f 100%);
+    color: var(--white); text-align: center;
+  }
+  .hero h1 { font-size: 46px; font-weight: 800; margin-bottom: 20px; line-height: 1.15; }
+  .hero p { font-size: 18px; color: #cbd5e1; max-width: 680px; margin: 0 auto 36px; }
+  .hero .badge-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+  .badge {
+    padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 600;
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18);
+    letter-spacing: 0.01em;
+  }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* Stats */
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; text-align: center; }
+  .stat-number { font-size: 44px; font-weight: 800; color: var(--blue); }
+  .stat-label { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+  .about-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 14px; }
+  .about-text p { color: var(--gray-600); margin-bottom: 10px; font-size: 15px; }
+  .cert-list { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .cert-tag {
+    padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 600;
+    background: #eff6ff; color: var(--blue); border: 1px solid #bfdbfe;
+  }
+  .about-img img { border-radius: 12px; object-fit: cover; }
+
+  /* Products */
+  .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .product-card {
+    background: var(--white); border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--gray-200); transition: all .2s;
+  }
+  .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+  .product-card .img-box {
+    width: 100%; height: 240px; overflow: hidden; background: var(--gray-100);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .product-card .img-box img { width: 100%; height: 100%; object-fit: contain; padding: 16px; }
+  .product-card .info { padding: 14px 16px; }
+  .product-card h4 {
+    font-size: 13px; font-weight: 600; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; margin-bottom: 8px; color: var(--gray-800);
+  }
+  .product-card .row { display: flex; justify-content: space-between; align-items: center; }
+  .product-card .price { font-size: 16px; font-weight: 700; color: var(--orange); }
+  .product-card .moq { font-size: 12px; color: var(--gray-500); }
+  .product-card .btn-inquire {
+    display: block; text-align: center; padding: 8px;
+    border-radius: 6px; font-size: 13px; font-weight: 600; margin-top: 10px;
+    border: 1px solid var(--blue); color: var(--blue); background: transparent;
+    transition: all .15s;
+  }
+  .product-card .btn-inquire:hover { background: var(--blue); color: var(--white); }
+
+  /* Categories */
+  .cat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; text-align: center; margin-bottom: 48px; }
+  .cat-item {
+    padding: 20px 12px; border-radius: 10px; background: var(--white);
+    border: 1px solid var(--gray-200); transition: all .15s; cursor: pointer;
+  }
+  .cat-item:hover { border-color: var(--blue); background: #f8faff; }
+  .cat-item .icon { font-size: 28px; margin-bottom: 8px; }
+  .cat-item .label { font-size: 13px; font-weight: 600; color: var(--gray-700); }
+
+  /* Partners */
+  .partner-grid { display: flex; justify-content: center; gap: 36px; flex-wrap: wrap; align-items: center; }
+  .partner-item {
+    padding: 24px 28px; border: 1px solid var(--gray-200); border-radius: 12px;
+    font-size: 20px; font-weight: 700; color: var(--gray-600);
+    background: var(--white); text-align: center; min-width: 150px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Why Us */
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .why-card {
+    text-align: center; padding: 32px 20px; border-radius: 12px;
+    background: var(--white); border: 1px solid var(--gray-200);
+  }
+  .why-card .emoji { font-size: 36px; margin-bottom: 12px; }
+  .why-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .why-card p { font-size: 13px; color: var(--gray-500); }
+  .section-dark .why-card { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); }
+  .section-dark .why-card h4 { color: var(--white); }
+  .section-dark .why-card p { color: var(--gray-400); }
+
+  /* Contact */
+  .contact-card {
+    max-width: 560px; margin: 0 auto; background: var(--white);
+    border-radius: 16px; padding: 40px; box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    border: 1px solid var(--gray-200);
+  }
+  .contact-card h3 { font-size: 20px; margin-bottom: 4px; }
+  .contact-card .role { color: var(--gray-500); font-size: 14px; margin-bottom: 24px; }
+  .contact-row { display: flex; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--gray-100); }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-label { font-size: 11px; text-transform: uppercase; color: var(--gray-500); min-width: 70px; letter-spacing: 0.04em; }
+  .contact-value { font-weight: 600; font-size: 15px; }
+
+  /* Footer */
+  .footer { background: var(--gray-900); color: var(--gray-500); text-align: center; padding: 40px 0; font-size: 13px; }
+  .footer p + p { margin-top: 6px; }
+
+  /* CTA Strip */
+  .cta-strip {
+    padding: 60px 0; text-align: center;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: var(--white);
+  }
+  .cta-strip h2 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+  .cta-strip p { color: #bfdbfe; margin-bottom: 24px; font-size: 16px; }
+
+  @media (max-width: 1024px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .section { padding: 48px 0; }
+    .section-title { font-size: 26px; }
+    .hero h1 { font-size: 28px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .partner-grid { gap: 16px; }
+    .nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="#"><img src="images/logo.jpg" alt="Songcheng" class="logo" /></a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary" style="padding:8px 18px;font-size:13px">Inquire Now</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>Premium Bathroom Hardware<br>Engineered for Global Markets</h1>
+    <p>OEM/ODM manufacturer specializing in kitchen faucets, shower systems, basin faucets, and bathroom plumbing — delivering certified quality since 2007 from our 10,000m² facility.</p>
+    <div class="badge-row">
+      <span class="badge">cUPC Certified</span>
+      <span class="badge">ISO 9001</span>
+      <span class="badge">CE Marked</span>
+      <span class="badge">10,000m² Factory</span>
+      <span class="badge">19 Years Exp.</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-white" style="padding:14px 36px;font-size:15px">Get a Quote</a>
+      <a href="#products" class="btn btn-outline-white" style="padding:14px 36px;font-size:15px">View Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-number">19+</div><div class="stat-label">Years of Manufacturing</div></div>
+      <div><div class="stat-number">10,000m²</div><div class="stat-label">Factory Area</div></div>
+      <div><div class="stat-number">1%</div><div class="stat-label">U.S. Market Coverage</div></div>
+      <div><div class="stat-number">50+</div><div class="stat-label">Countries Served</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section section-gray">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>Professional Bathroom Hardware Manufacturer Since 2007</h3>
+        <p>Wenzhou Songcheng Trading Co., Ltd. is a specialized manufacturer of kitchen faucets, sink accessories, shower systems, and basin faucets. Operating from a 10,000m² factory with advanced CNC machining, automatic polishing lines, and rigorous testing labs, we deliver consistent quality at factory-direct prices.</p>
+        <p>Our products serve the U.S. market with 1% nationwide coverage and growing. We are certified with <strong>cUPC, ISO 9001, and CE</strong>, ensuring full compliance with North American and global standards.</p>
+        <p>We partner with leading brands including <strong>Roca, Delta, The Chicago Faucet, and The Rubnet Faucet</strong>, offering complete OEM/ODM supply chain support and market-aligned design solutions.</p>
+        <div class="cert-list">
+          <span class="cert-tag">cUPC Certified</span>
+          <span class="cert-tag">ISO 9001</span>
+          <span class="cert-tag">CE Marked</span>
+          <span class="cert-tag">OEM / ODM</span>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="images/banner.jpg" alt="Songcheng Factory" style="width:100%;border-radius:12px" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Categories -->
+<section id="products" class="section">
+  <div class="container">
+    <h2 class="section-title">Product Categories</h2>
+    <p class="section-subtitle">One-stop sourcing for all bathroom and kitchen hardware needs.</p>
+    <div class="cat-grid">
+      <div class="cat-item"><div class="icon">🚿</div><div class="label">Shower Systems</div></div>
+      <div class="cat-item"><div class="icon">🛁</div><div class="label">Bathtub Faucets</div></div>
+      <div class="cat-item"><div class="icon">🪥</div><div class="label">Basin Faucets</div></div>
+      <div class="cat-item"><div class="icon">🍳</div><div class="label">Kitchen Faucets</div></div>
+      <div class="cat-item"><div class="icon">🔧</div><div class="label">Water Plumbing</div></div>
+      <div class="cat-item"><div class="icon">✨</div><div class="label">Accessories</div></div>
+    </div>
+
+    <h3 style="font-size:18px;font-weight:700;margin-bottom:20px">Featured Products</h3>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H20bed8b0c5dd4070a06298c84fed315e6/Matte-Black-12-Inch-Rainfall-Waterfall-Modern.jpg_480x480.jpg?hasNWGrade=1" alt="Matte Black Thermostatic Shower System" loading="lazy" /></div>
+        <div class="info">
+          <h4>Matte Black 12" Rainfall Thermostatic Shower System Brass Dual Handle Wall Mount</h4>
+          <div class="row"><span class="price">US $81-89</span><span class="moq">MOQ: 1 pc</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/Hcc7cccfef38640878fc34fcee6da147ec/Modern-High-Quality-Songcheng-304-Stainless-Steel.jpg_480x480.jpg?hasNWGrade=1" alt="Songcheng 304 SS Shower System" loading="lazy" /></div>
+        <div class="info">
+          <h4>Songcheng 304 Stainless Steel Rainfall Shower System Wall-Mounted 5 Year Warranty</h4>
+          <div class="row"><span class="price">US $48.00</span><span class="moq">MOQ: 50 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/Hea9e5d37d1774ad2919f903e9a950ff2z/Floor-Mounted-Brushed-Brass-Shower-Faucet-Thermostatic.png_480x480.jpg" alt="Floor Mount Brass Shower Faucet" loading="lazy" /></div>
+        <div class="info">
+          <h4>Floor-Mounted Brushed Brass Shower Faucet Thermostatic Single Handle Soft Spray</h4>
+          <div class="row"><span class="price">US $60-69</span><span class="moq">MOQ: 1 pc</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H81f241a9bd7c4903bbb599e82811b2fdj/Contemporary-Polished-Brass-Ceramic-Floor-Mount-Shower.jpg_480x480.jpg" alt="Polished Brass Floor Mount Shower" loading="lazy" /></div>
+        <div class="info">
+          <h4>Contemporary Polished Brass Ceramic Floor Mount Shower Faucet Set Rainfall Waterfall</h4>
+          <div class="row"><span class="price">US $34.50-41.50</span><span class="moq">MOQ: 2 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H46f67c54b3944ad2b1072f93da10ecf6G/Polished-Black-Chrome-Stainless-Steel-Square-Concealed.jpg_480x480.jpg" alt="Concealed Wall Shower Faucet" loading="lazy" /></div>
+        <div class="info">
+          <h4>Polished Black Chrome Stainless Steel Square Concealed Wall Shower Faucet Thermostatic</h4>
+          <div class="row"><span class="price">US $58.77</span><span class="moq">MOQ: 2 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/He065290f637e433d86bb2ad80df85a35x/Hot-Sale-Stainless-Steel-Brass-Touchless-Sensor.jpg_480x480.jpg" alt="Touchless Sensor Basin Faucet" loading="lazy" /></div>
+        <div class="info">
+          <h4>Stainless Steel Brass Touchless Sensor Deck Mount Modern Bathroom Basin Faucet</h4>
+          <div class="row"><span class="price">US $8.15-8.35</span><span class="moq">MOQ: 1 pc</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H0c89e30330214e81987c60421aeb0ecal/Brushed-Brass-Modern-Concealed-Deck-Mounted-Basin.png_480x480.jpg" alt="Brushed Brass Basin Faucet" loading="lazy" /></div>
+        <div class="info">
+          <h4>Brushed Brass Modern Concealed Deck Mounted Basin Faucet Single Handle Ceramic Valve</h4>
+          <div class="row"><span class="price">US $39.50-42.60</span><span class="moq">MOQ: 1 pc</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H344b6cbe3a4a4151b7a320bf865972c2f/Polished-Zinc-Alloy-Chrome-Wall-Mounted-Bathtub.jpg_480x480.jpg" alt="Bathtub Shower Set" loading="lazy" /></div>
+        <div class="info">
+          <h4>Polished Zinc-Alloy Chrome Wall-Mounted Bathtub Shower Set Single Handle Massage</h4>
+          <div class="row"><span class="price">US $5.80-5.85</span><span class="moq">MOQ: 10 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H43d6f8801b0b437aa90edc0a1f86c309T/2025-New-Model-Supercharged-High-Volume-Rainfall.png_480x480.jpg" alt="Supercharged Rainfall Showerhead" loading="lazy" /></div>
+        <div class="info">
+          <h4>2025 New Model Supercharged High Volume Rainfall Showerhead Chrome Finish</h4>
+          <div class="row"><span class="price">US $3.44-3.95</span><span class="moq">MOQ: 2 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/Hde85edc57b08405e9f594aafecc6b5edJ/Modern-Gold-Bidet-Sprayer-Concealed-Nozzle-Wall.jpg_480x480.jpg" alt="Gold Bidet Sprayer Set" loading="lazy" /></div>
+        <div class="info">
+          <h4>Modern Gold Bidet Sprayer Concealed Nozzle Wall-Mounted Brass 5 Year Warranty</h4>
+          <div class="row"><span class="price">US $43.00</span><span class="moq">MOQ: 2 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/H9a93c966ee624baca9af2a20c509cc40r/Modern-Contemporary-Design-Single-Stainless-Steel-Brushed.jpg_250x250.jpg?hasNWGrade=1" alt="Pull-Down Kitchen Faucet" loading="lazy" /></div>
+        <div class="info">
+          <h4>Modern Stainless Steel Brushed Black Pull-Down Kitchen Faucet Deck Mounted</h4>
+          <div class="row"><span class="price">US $17-18</span><span class="moq">MOQ: 2 pcs</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <div class="img-box"><img src="https://s.alicdn.com/@sc04/kf/Hf1056a3f629c40ff8232e7555b48bc1fw/High-end-Modern-Bathroom-Bidet-Sprayer-with.jpg_250x250.jpg?hasNWGrade=1" alt="Bidet Sprayer Set" loading="lazy" /></div>
+        <div class="info">
+          <h4>High-end Modern Bathroom Bidet Sprayer Set Tissue Holder Wall-Mounted Brass</h4>
+          <div class="row"><span class="price">US $63-66</span><span class="moq">MOQ: 1 pc</span></div>
+          <a href="#contact" class="btn-inquire">Inquire Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Why Us -->
+<section id="why" class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">Why Partner With Songcheng</h2>
+    <p class="section-subtitle">What sets us apart as your trusted OEM/ODM manufacturing partner.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="emoji">🏭</div>
+        <h4>10,000m² Factory</h4>
+        <p>CNC machining, auto polishing lines, and dedicated R&D lab — in-house control from raw material to finished product.</p>
+      </div>
+      <div class="why-card">
+        <div class="emoji">✅</div>
+        <h4>Certified Quality</h4>
+        <p>cUPC, ISO 9001, and CE certified. Every product tested before shipment to meet North American standards.</p>
+      </div>
+      <div class="why-card">
+        <div class="emoji">🤝</div>
+        <h4>Trusted by Top Brands</h4>
+        <p>Supplying Roca, Delta, Chicago Faucet, and Rubnet Faucet — proof of consistent quality and reliability.</p>
+      </div>
+      <div class="why-card">
+        <div class="emoji">📦</div>
+        <h4>Full Supply Chain</h4>
+        <p>Manufacturing, quality inspection, packaging, and logistics — one partner for your entire faucet supply chain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners -->
+<section id="partners" class="section section-gray">
+  <div class="container">
+    <h2 class="section-title">Brands We Supply</h2>
+    <p class="section-subtitle">We are a trusted OEM partner for leading global bathroom brands.</p>
+    <div class="partner-grid">
+      <div class="partner-item">Roca</div>
+      <div class="partner-item">Delta</div>
+      <div class="partner-item">Chicago Faucet</div>
+      <div class="partner-item">Rubnet Faucet</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Looking for a Reliable Faucet Manufacturer?</h2>
+    <p>Send us your requirements. We respond within 24 hours with pricing and samples.</p>
+    <a href="mailto:435648265@qq.com" class="btn btn-white" style="padding:14px 40px;font-size:15px">Send an Inquiry</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="section-subtitle">For product inquiries, pricing, samples, and OEM/ODM projects.</p>
+    <div class="contact-card">
+      <h3>Get in Touch</h3>
+      <p class="role">Sales &mdash; Wenzhou Songcheng Trading Co., Ltd.</p>
+      <div class="contact-row">
+        <span class="contact-label">WeChat</span>
+        <span class="contact-value">+86 15267039790</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:435648265@qq.com">435648265@qq.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Wenzhou, Zhejiang, China</span>
+      </div>
+      <div style="margin-top: 24px;">
+        <a href="mailto:435648265@qq.com" class="btn btn-primary" style="width:100%">Send Email Inquiry</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2007&ndash;2026 Wenzhou Songcheng Trading Co., Ltd. All rights reserved.</p>
+    <p>cUPC Certified &middot; ISO 9001 &middot; CE Marked &middot; OEM / ODM</p>
+  </div>
+</footer>
+
+</body>
+</html>
