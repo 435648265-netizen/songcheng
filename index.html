@@ -516,7 +516,7 @@
     <div class="contact-card">
       <h3>Request a Quote</h3>
       <p class="role">Mike Chen — Sales Manager</p>
-      <form action="mailto:Mike@wenzhou-bath-sanitary.com" method="post" enctype="text/plain">
+      <form onsubmit="sendMail(event, 'Mike@wenzhou-bath-sanitary.com')">
         <div class="form-group">
           <label for="name">Your Name *</label>
           <input type="text" id="name" name="name" placeholder="John Smith" required />
@@ -605,6 +605,19 @@
 
 <!-- Floating CTA for mobile -->
 <div class="floating-cta"><a href="#contact">📋 Get Free Quote</a></div>
+
+<script>
+function sendMail(e, addr) {
+  e.preventDefault();
+  const f = e.target;
+  const name = f.querySelector('[name="name"]').value;
+  const email = f.querySelector('[name="email"]').value;
+  const wp = (f.querySelector('[name="whatsapp"]')||{}).value || '';
+  const msg = f.querySelector('[name="message"]').value;
+  const body = `Name: ${name}\nEmail: ${email}\nWhatsApp: ${wp}\n\nRequirements:\n${msg}`;
+  location.href = `mailto:${addr}?subject=Product%20Quote%20Request&body=${encodeURIComponent(body)}`;
+}
+</script>
 
 </body>
 </html>
