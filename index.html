@@ -516,7 +516,10 @@
     <div class="contact-card">
       <h3>Request a Quote</h3>
       <p class="role">Mike Chen — Sales Manager</p>
-      <form onsubmit="sendMail(event, 'Mike@wenzhou-bath-sanitary.com')">
+      <form action="https://formsubmit.co/Mike@wenzhou-bath-sanitary.com" method="POST">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New Quote Request — wenzhou-bath-sanitary.com" />
+        <input type="hidden" name="_next" value="https://wenzhou-bath-sanitary.com/#contact" />
         <div class="form-group">
           <label for="name">Your Name *</label>
           <input type="text" id="name" name="name" placeholder="John Smith" required />
